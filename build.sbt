@@ -78,7 +78,6 @@ lazy val buildInfoSettings: Seq[Def.Setting[_]] = Seq(
     name,
     version,
     stableVersion,
-    "coursier" -> coursier.util.Properties.version,
     "nightly" -> version.value,
     "scalameta" -> scalametaV,
     "semanticdbSbt" -> semanticdbSbt,
@@ -214,10 +213,6 @@ lazy val `scalafix-sbt` = project
         s
     },
     sbtPlugin := true,
-    libraryDependencies ++= Seq(
-      "io.get-coursier" %% "coursier" % coursier.util.Properties.version,
-      "io.get-coursier" %% "coursier-cache" % coursier.util.Properties.version
-    ),
     testQuick := {}, // these test are slow.
     test.in(IntegrationTest) := {
       RunSbtCommand(
