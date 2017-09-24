@@ -349,9 +349,6 @@ lazy val unit = project
         .in(Compile, compile)
         .dependsOn(
           compile.in(testsInput, Compile),
-          compile.in(testsInputSbt, Compile),
-          compile.in(testsOutputSbt, Compile),
-          compile.in(testsOutputDotty, Compile),
           compile.in(testsOutput, Compile)
         )
         .value,
