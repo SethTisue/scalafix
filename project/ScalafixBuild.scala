@@ -83,7 +83,7 @@ object ScalafixBuild extends AutoPlugin with GhpagesKeys {
         "-P:semanticdb:synthetics:on"
       ),
       addCompilerPlugin(
-        "org.scalameta" % "semanticdb-scalac" % scalametaV cross CrossVersion.full
+        "org.scalameta" % "semanticdb-scalac_2.12.10" % scalametaV
       )
     )
 

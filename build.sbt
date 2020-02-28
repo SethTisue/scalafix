@@ -73,7 +73,7 @@ lazy val rules = project
   .settings(
     moduleName := "scalafix-rules",
     description := "Built-in Scalafix rules",
-    libraryDependencies += "org.scalameta" % "semanticdb-scalac-core" % scalametaV cross CrossVersion.full
+    libraryDependencies += "org.scalameta" % "semanticdb-scalac-core_2.12.10" % scalametaV
   )
   .dependsOn(core)
 
@@ -81,7 +81,7 @@ lazy val reflect = project
   .in(file("scalafix-reflect"))
   .settings(
     moduleName := "scalafix-reflect",
-    isFullCrossVersion,
+    // isFullCrossVersion,
     libraryDependencies ++= Seq(
       "org.scala-lang" % "scala-compiler" % scalaVersion.value,
       "org.scala-lang" % "scala-reflect" % scalaVersion.value
@@ -258,7 +258,7 @@ lazy val docs = project
     crossScalaVersions := List(scala212),
     libraryDependencies ++= List(
       "com.geirsson" %% "metaconfig-docs" % metaconfigV,
-      "org.scalameta" % "semanticdb-scalac-core" % scalametaV cross CrossVersion.full
+      "org.scalameta" % "semanticdb-scalac-core_2.12.10" % scalametaV
     )
   )
   .dependsOn(testkit, core, cli)

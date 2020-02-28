@@ -13,12 +13,12 @@ object Dependencies {
   val jgit = "org.eclipse.jgit" % "org.eclipse.jgit" % "4.5.4.201711221230-r"
 
   var testClasspath: String = "empty"
-  def semanticdb: ModuleID = "org.scalameta" % "semanticdb-scalac" % scalametaV cross CrossVersion.full
+  def semanticdb: ModuleID = "org.scalameta" % "semanticdb-scalac_2.12.10" % scalametaV
   def metaconfig: ModuleID = "com.geirsson" %% "metaconfig-typesafe-config" % metaconfigV
   def googleDiff = "com.googlecode.java-diff-utils" % "diffutils" % "1.3.0"
 
   def metacp = "org.scalameta" %% "metacp" % scalametaV
-  def semanticdbPluginLibrary = "org.scalameta" % "semanticdb-scalac-core" % scalametaV cross CrossVersion.full
+  def semanticdbPluginLibrary = "org.scalameta" % "semanticdb-scalac-core_2.12.10" % scalametaV
   def scalameta = "org.scalameta" %% "scalameta" % scalametaV
   def scalatest = "org.scalatest" %% "scalatest" % "3.0.8"
   def scalacheck = "org.scalacheck" %% "scalacheck" % "1.14.0"
